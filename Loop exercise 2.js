@@ -75,7 +75,7 @@ for (i = 0; i < b.length; i++) {
 
 
 }
-console.log(najmanji );
+console.log(najmanji);
 
 
 
@@ -127,13 +127,120 @@ console.log(combined);
 
 
 
-//task 9
+//task 9 Write a program that deletes a given element e from the array a. 
+
+var e = 2;
+var a = [4, 6, 2, 8, 2, 2];
+var b = []
+for (i = 0; i < a.length; i++) {
+    if (a[i] !== e) {
+    }
+    else {
+        delete a[i];
+
+    }
+}
+console.log(a);
+//
+
+var e = 2;
+var a = [4, 6, 2, 8, 2, 2];
+var b = []
+for (i = 0, j = 0; i < a.length; i++) {
+    if (a[i] !== e) {
+        b[j] = a[i];
+        j++;
+    }
+
+}
+console.log(b);
 
 
 
 
 
 
+var e = 2;
+var a = [4, 6, 2, 8, 2, 2];
+var b = []
+for (i = 0; i < a.length; i++) {
+    if (a[i] !== e) {
+        b[b.length] = a[i];
+
+    }
+
+}
+console.log(b);
+
+//10.Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message. 
+//
+var e = 78;
+var p = 3;
+var a = [2, -2, 33, 12, 5, 8];
+var b = [];
+
+for (i = 0; i < a.length; i++) {
+    if (i === p) {
+        b[b.length] = e;
+    }
+
+    b[b.length] = a[i];
+}
+console.log(b);
+
+
+
+
+
+var a = "* * * *";
+var size = 4;
+for (i = 0; i < size; i++) {
+    console.log(a);
+}
+
+/////
+
+var a = "";
+var size = 10;
+
+for (i = 0; i < size; i++) {
+    a += " * "
+
+}
+for (i = 0; i < size; i++) {
+    console.log(a);
+}
+
+//////////////////////////////
+
+var size = 6;
+var shape = "";
+
+
+for (var row = 0; row < size; row++) {
+    for (var column = 0; column < size; column++) {
+        shape += " * ";
+    }
+
+    shape += " \n ";
+
+}
+console.log(shape);
+
+
+
+///// 
+var a = "";
+var size = 3;
+var shape = ''
+
+
+for (i = 0; i < size; i++) {
+    a += "* ";
+    shape += a + "\n";
+}
+
+console.log(shape);
 
 
 
