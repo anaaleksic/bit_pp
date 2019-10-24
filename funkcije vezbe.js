@@ -37,21 +37,41 @@ console.log(mean(5, 15, 9, 10));
 
 
 //5.
-function stars(size) {
-    var str = '*';
-    for (var i = 0; i < size; i++)
-        for (var j = 0; j < size; j++) {
-            if (i !== 0 || i != size - 1 || j != 0 || j !== size - 1) {
-                str += " "
+function stars(a) {
+    var str = '* ';
+    for (var i = 0; i < a; i++) {
+        for (var j = 0; j < a; j++) {
+            if (i === 0 || j === 0 || i === a - 1 || j === a - 1) {
+                str += "* "
             } else {
-                str += '*';
+                str += ' ';
             }
-        } str += '\n';
+        }
+
+        str += '\n';
+    }
     return str;
 }
 console.log(stars(5));
 
+/////////////////////////////// 5. funkcionise
 
+function stars(a) {
+    var str = " ";
+    for (var i = 0; i < a; i++) {
+        for (var j = 0; j < a; j++) {
+            if (i === 0 || i === a - 1 || j === 0 || j === a - 1) {
+                str += "* "
+            } else {
+                str += '  ';
+            }
+        }
+
+        str += '\n';
+    }
+    return str;
+}
+console.log(stars(5));
 
 
 
