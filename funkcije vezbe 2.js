@@ -270,13 +270,118 @@ function niz(array, letter) {
 console.log(niz("Apsolutno", "s"));
 
 
-var a = "apsolutni";
-console.log(a.length);
-console.log(a[5].length);
+
+/*6.Write a function to find the position of the last occurrence of a character in a string.
+ The result should be in human numeration form. If there are no occurrences of the character, function should return -1.*/
+
+
+
+function niz(rec, letter) {
+    var br = -1;
+    for (var i = 0; i < rec.length; i++) {
+        if (rec[i] === letter) {
+            br = i;
+        }
+    }
+
+    return br;
+}
+
+console.log(niz("Apsolutno", "o"));
+
+
+
+
+function niz(rec, letter) {
+    var br = -1;
+    for (var i = rec.length; i >= 0; i--) {
+        if (rec[i] === letter) {
+            br = i;
+        }
+    }
+    return br;
+}
+console.log(niz("Apsolutno", "A"));
+
 
 
 //7.Write a function to convert string into an array. Space in a string should be represented as “null” in new array.
 
+function str(rec) {
+    var a = [];
+    for (var i = 0; i < rec.length; i++) {
+        if (rec[i] !== " ") {
+            a[i] = rec[i];
+        }
+        else {
+            a[i] = null;
+        }
+    } return a;
+}
+console.log(str("Random"));
+
+
+/*8. Write a function that accepts a number as a parameter and checks if the number is prime or not. 
+Note: A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. */
+
+function prime(broj) {
+
+    if (broj === 1) {
+        return true;
+    }
+    if (broj === 2) {
+        return false;
+    }
+    for (var i = 2; i < broj; i++) {
+        if (broj % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(prime(2));
+console.log(prime(1));
+console.log(prime(120));
+console.log(prime(57));
+
+
+/*9.  Write a function that replaces spaces in a string with provided separator. If separator is not provided, use “-” (dash) as the default separator. */
+
+function git(str, separator) {
+    var b = "";
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] !== " ") {
+            b += str[i];
+        }
+        else {
+            b += separator;
+        }
+    }
+    return b;
+}
+
+console.log(git("My random string", "_"));
+console.log(git("My random string", "+"));
+console.log(git("My random string", "-"));
+
+
+//10. Write a function to get the first n characters and add “...” at the end of newly created string.
+
+function bla(char, broj) {
+    var res = "";
+    for (i = 0; i < broj; i++) {
+        res += char[i];
+
+    }
+    return res + "...";
+}
+console.log(bla("My random string", 8));
+
+//11.  Write a function that converts an array of strings into an array of numbers. Filter out all non-numeric values.
+
+fuction array(str){
+
+}
 
 
 
