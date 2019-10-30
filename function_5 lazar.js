@@ -190,23 +190,23 @@ console.log(word('Belgrade Institute of Technology'));
 Don't display two of the same numbers at the same time.
 Display the number of possible combinations, as well. (E.g. (1.2),(2,1) is allowed, but not (1,1), (2,2)...).*/
 
-
+"use strict"
 function combination(numbers) {
-    var comb = "";
-    for (var i = 0; i <= numbers.length; i++) {
-        for (var j = 0; j <= numbers.length; j++) {
+    var comb = '';
+    for (var i = 1; i <= numbers; i++) {
+        for (var j = 1; j <= numbers; j++) {
             if (i !== j) {
-
+                comb = comb + i + j + ' ';
             }
         }
 
+        comb += '\n'
 
 
     } return comb;
 }
 
-
-console.log(combination([1, 2, 3, 4, 5, 6, 7]));
+console.log(combination(7));
 
 
 /* 10. Write a program that checks if the entered number is a prime number (i.e. divisible only by 1 and by itself).
@@ -235,10 +235,54 @@ Output: true | false | true
 
 "use strict"
 
+function palindrome(str) {
+    for (var i = 0; i < str.length; i++) {
+        var res1 = '';
+        res1 = res1 + str[i];
+
+    }
+    for (var j = str.length - 1; j >= 0; j--) {
+        var res2 = '';
+        res2 = res2 + str[j];
+    }
+
+    if (res1 === res2) {
+        return true;
+    }
+
+    return false;
+
+}
+
+console.log(palindrome('eye'))
+console.log(palindrome('Geek'))
+console.log(palindrome('a nut for a jar of tuna'))
+
+
+/* 12. Write a program that calculates the greatest common divisor of two integers. Note: The greatest common divisor of two non-zero integers is the greatest positive number that divides both numbers with no remainder.
+Input:  192 42 | 81 9
+Output: 6      | 9
+
+*/
+
+
+function number(digit, digit2) {
+    for (var i = 1; i < digit; i++) {
+
+        if (digit % i === 0 && digit2 % i === 0) {
+
+        }
+    }
+    return i;
+
+
+}
+
+
+console.log(number(192));
 
 
 
-/********trgtgttrrth lazar i ja radimo zadatke...*/
 
 
 
