@@ -238,7 +238,7 @@ Output: true | false | true
 
 
 
-/********trgtgttrrth*/ * /
+/********trgtgttrrth lazar i ja radimo zadatke...*/
 
 
 
