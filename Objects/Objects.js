@@ -1,3 +1,5 @@
+
+"use strict"
 /* 1. 
 Create an object that represents your favourite coffee. Please include coffee name, strength, flavour, milk, sugar, … everything you like! 
 */
@@ -235,5 +237,29 @@ var printIngredients = function (listOfIngredients) {
 var res = printIngredients(['sdf', 'ewrwerewr']);
 console.log(res);
 
+
+
+
+//built in objects 1.
+
+//1
+function Replace(initiate, fromBase, toBase) {
+    var intVal = parseInt(initiate, fromBase);
+    return intVal.toString(toBase);
+
+
+
+}
+
+var res = Replace('ff', 16, 8);
+console.log(res);
+
+//2
+
+function reverse(value) {
+
+    return String(value).reverse();
+
+}
 
 
