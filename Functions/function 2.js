@@ -1,192 +1,4 @@
 
-function max(a, b) {
-    if (a > b)
-        return a;
-    else
-        return b;
-}
-console.log(max(6, 81));
-
-//////////////////////2.
-
-function odd(a) {
-    if (a % 2 !== 0) {
-        return "The number is odd";
-    }
-    else {
-        return "the number is even";
-    }
-}
-console.log(odd(7));
-
-///////////////////3.
-function three_digit(a) {
-    if (a > 99 && a < 1000)
-        return 'Number is three digit';
-    else
-        return 'Is not three digit';
-}
-console.log(three_digit(182));
-
-////////////////////4.
-
-function mean(a, b, c, d) {
-    return (a + b + c + d) / 4;
-}
-console.log(mean(5, 15, 9, 10));
-
-
-//5.
-function stars(a) {
-    var str = '* ';
-    for (var i = 0; i < a; i++) {
-        for (var j = 0; j < a; j++) {
-            if (i === 0 || j === 0 || i === a - 1 || j === a - 1) {
-                str += "* "
-            } else {
-                str += ' ';
-            }
-        }
-
-        str += '\n';
-    }
-    return str;
-}
-console.log(stars(5));
-
-/////////////////////////////// 5. funkcionise
-
-function stars(a) {
-    var str = " ";
-    for (var i = 0; i < a; i++) {
-        for (var j = 0; j < a; j++) {
-            if (i === 0 || i === a - 1 || j === 0 || j === a - 1) {
-                str += "* "
-            } else {
-                str += '  ';
-            }
-        }
-
-        str += '\n';
-    }
-    return str;
-}
-console.log(stars(5));
-
-
-
-
-//6.
-
-function star(a, b, c) {
-    var str = "";
-    var row = "";
-    for (var i = 0; i < a; i++) {
-
-        str += "* ";
-    }
-    row = str + "\n";
-    str = '';
-    for (var i = 0; i < b; i++) {
-        str += "* ";
-
-    }
-    var row1 = row + str + '\n';
-    str = '';
-    for (var i = 0; i < c; i++) {
-        str += "* ";
-
-    }
-    var row3 = row1 + str;
-
-    return row3;
-}
-console.log(star(5, 3, 7));
-
-
-
-//7.
-function numOfDigits(x) {
-    var br = 0;
-    while (x / 10 > 0) {
-        br++;
-        x = x / 10;
-    }
-    return br;
-}
-
-console.log(numOfDigits(12));
-
-
-
-//7.
-function numOfDigits(x) {
-    var br = '';
-    br += x;
-    return br.length;
-
-}
-
-console.log(numOfDigits(16552));
-
-
-
-
-//8.
-function appearances(array, num) {
-    var br = 0;
-    for (var i = 0; i < array.length; i++)
-        if (num === array[i])
-            br++;
-    return br;
-
-}
-
-console.log(appearances([2, 4, 7, 8, 7, 7, 1], 7));
-
-//9.
-function oddNum(array) {
-    var br = 0;
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] % 2 !== 0) {
-            br++;
-
-        }
-    } return br;
-}
-console.log(oddNum([2, 4, 7, 8, 7, 7, 1]));
-
-//10.
-
-function letter(str) {
-    var a = '';
-    a += str;
-    var br = 0;
-    for (var i = 0; i < a.length; i++) {
-        if (a[i] === "A" || a[i] === "a") {
-            br++;
-        }
-    } return br;
-}
-console.log(letter('Abcaabcaabca'));
-
-
-
-
-
-//11.
-function str(a, num) {
-    var b = "";
-
-    for (var i = 0; i < num; i++) {
-        b += a;
-
-    } return b;
-}
-console.log(str("Abc", 3));
-
-
-
 ////// 1.Write a function to check whether the `input` is a string or not.
 
 
@@ -241,13 +53,10 @@ function appearances(rec, num) {
         if (num === rec[i]) {
             br++;
         }
-
     }
 
     return br;
-
 }
-
 console.log(appearances("My random string", "n"));
 
 
@@ -264,17 +73,12 @@ function niz(array, letter) {
 
     } return -1;
 }
-
-
-
 console.log(niz("Apsolutno", "s"));
 
 
 
 /*6.Write a function to find the position of the last occurrence of a character in a string.
  The result should be in human numeration form. If there are no occurrences of the character, function should return -1.*/
-
-
 
 function niz(rec, letter) {
     var br = -1;
@@ -345,6 +149,20 @@ console.log(prime(120));
 console.log(prime(57));
 
 
+//drugi nacin
+function numberPrime(a) {
+    var res;
+    for (var i = 2; i <= a - 1; i++) {
+        if (a % i === 0) {
+            return false;
+        }
+        return true;
+    }
+}
+console.log(numberPrime(7));
+
+
+
 /*9.  Write a function that replaces spaces in a string with provided separator. If separator is not provided, use “-” (dash) as the default separator. */
 
 function git(str, separator) {
@@ -378,10 +196,70 @@ function bla(char, broj) {
 console.log(bla("My random string", 8));
 
 //11.  Write a function that converts an array of strings into an array of numbers. Filter out all non-numeric values.
+//["1", "21", undefined, "42", "1e+3", Infinity] -> [1, 21, 42, 1000]
 
-fuction array(str){
+function convertStringsToNumbers(arrayOfStrings) {
+
+    var result = [];
+    var j = 0;
+
+    for (var i = 0; i < arrayOfStrings.length; i++) {
+
+        if (isFinite(arrayOfStrings[i])) {
+
+            result[j] = parseFloat(arrayOfStrings[i]);
+            j++;
+        }
+    }
+
+    return result;
 
 }
+
+console.log(convertStringsToNumbers(["1", "21", undefined, "42", "1e+3", Infinity, 0]));
+
+
+//12 Write a function to calculate how many years there are left until retirement based on the year of birth.
+// Retirement for men is at age of 65 and for women at age of 60. If someone is already retired, a proper message should be displayed. 
+
+function retirement(yearOfBirth, sex) {
+    if (sex = "male") {
+        if (2019 - yearOfBirth > 65) {
+            return "The person is already retired.";
+        }
+        return 65 - (2019 - yearOfBirth);
+    }
+    else if (sex = "female") {
+        if (2019 - yearOfBirth > 60) {
+            return "The person is already retired.";
+        }
+        return 60 - (2019 - yearOfBirth);
+    }
+}
+console.log(retirement(1985, "female"));
+
+/*13 Write a function to humanize a number (formats a number to a human-readable string) with the correct suffix such as 1st, 2nd, 3rd or 4th.
+1 -> 1st
+11 -> 11th
+Hint: num % 100 >= 11 && num % 100 <= 13
+*/
+
+function humanizeNumber(number) {
+    if (number % 100 >= 11 && number % 100 <= 13)
+        return number + "th";
+
+    switch (number % 10) {
+        case 1: return number + "st";
+        case 2: return number + "nd";
+        case 3: return number + "rd";
+    }
+
+    return number + "th";
+}
+
+console.log(humanizeNumber(1));
+console.log(humanizeNumber(25));
+console.log(humanizeNumber(334));
 
 
 

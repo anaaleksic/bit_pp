@@ -1,4 +1,4 @@
-
+// 1-Write a program that calculates the maximum of two given numbers. 
 function max(a, b) {
     if (a > b)
         return a;
@@ -7,7 +7,7 @@ function max(a, b) {
 }
 console.log(max(6, 81));
 
-//////////////////////2.
+//2.  Write a program that checks if a given number is odd.
 
 function odd(a) {
     if (a % 2 !== 0) {
@@ -19,7 +19,7 @@ function odd(a) {
 }
 console.log(odd(7));
 
-///////////////////3.
+//3.  Write a program that checks if a given number is a three digit long number.
 function three_digit(a) {
     if (a > 99 && a < 1000)
         return 'Number is three digit';
@@ -28,7 +28,9 @@ function three_digit(a) {
 }
 console.log(three_digit(182));
 
-////////////////////4.
+
+//4.Write a program that calculates an arithmetic mean of four numbers.
+
 
 function mean(a, b, c, d) {
     return (a + b + c + d) / 4;
@@ -36,43 +38,32 @@ function mean(a, b, c, d) {
 console.log(mean(5, 15, 9, 10));
 
 
-//5.
-function stars(a) {
-    var str = '* ';
+//5. Write a program that draws a square of a given size. For example,  if the size of square is 5 the program should draw: 
+// * * * * *
+// *       *
+// *       *
+// *       *
+// * * * * *
+
+function square(a) {
+    var row = '';
+
     for (var i = 0; i < a; i++) {
         for (var j = 0; j < a; j++) {
             if (i === 0 || j === 0 || i === a - 1 || j === a - 1) {
-                str += "* "
+                row += '* ';
             } else {
-                str += ' ';
+                row += "  ";
             }
         }
 
-        str += '\n';
+        row += '\n';
     }
-    return str;
+
+    return row;
 }
-console.log(stars(5));
 
-/////////////////////////////// 5. funkcionise
-
-function stars(a) {
-    var str = " ";
-    for (var i = 0; i < a; i++) {
-        for (var j = 0; j < a; j++) {
-            if (i === 0 || i === a - 1 || j === 0 || j === a - 1) {
-                str += "* "
-            } else {
-                str += '  ';
-            }
-        }
-
-        str += '\n';
-    }
-    return str;
-}
-console.log(stars(5));
-
+console.log(square(5));
 
 
 
@@ -105,7 +96,10 @@ console.log(star(5, 3, 7));
 
 
 
-//7.
+//7. Write a program that draws a horizontal chart representing three given values. For example, if values are 5, 3, and 7, the program should draw:
+//* * * * *
+//* * *
+//* * * * * * *
 function numOfDigits(x) {
     var br = 0;
     while (x / 10 > 0) {
@@ -119,7 +113,7 @@ console.log(numOfDigits(12));
 
 
 
-//7.
+//7.  Write a program that calculates a number of digits of a given number. 
 function numOfDigits(x) {
     var br = '';
     br += x;
@@ -132,7 +126,9 @@ console.log(numOfDigits(16552));
 
 
 
-//8.
+//8. Write a program that calculates a number of appearances of a given number in a given array.
+// Inputs: a = [2, 4, 7, 8, 7, 7, 1], e = 7
+// Result: 3
 function appearances(array, num) {
     var br = 0;
     for (var i = 0; i < array.length; i++)
@@ -144,7 +140,7 @@ function appearances(array, num) {
 
 console.log(appearances([2, 4, 7, 8, 7, 7, 1], 7));
 
-//9.
+//9. Write a program that calculates the sum of odd elements of a given array. 
 function oddNum(array) {
     var br = 0;
     for (var i = 0; i < array.length; i++) {
@@ -156,7 +152,8 @@ function oddNum(array) {
 }
 console.log(oddNum([2, 4, 7, 8, 7, 7, 1]));
 
-//10.
+//10. Write a program that calculates the number of appearances of a letter a in a given string. 
+// Modify the program so it calculates the number of both letters a and A.
 
 function letter(str) {
     var a = '';
@@ -174,7 +171,8 @@ console.log(letter('Abcaabcaabca'));
 
 
 
-//11.
+//11. Write a program that concatenates a given string given number of times. 
+//For example, if “abc” and 4 are given values, the program prints out abcabcabcabc. 
 function str(a, num) {
     var b = "";
 
@@ -183,5 +181,5 @@ function str(a, num) {
 
     } return b;
 }
-console.log(str("Abc", 3));
+console.log(str("Abc", 4));
 

@@ -1,5 +1,5 @@
 
-//Write IIFE that replaces the first and the last element of the given array and prints out its elements. 
+//1 Write IIFE that replaces the first and the last element of the given array and prints out its elements. 
 
 
 function replace(arr) {

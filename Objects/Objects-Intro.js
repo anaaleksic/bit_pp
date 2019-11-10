@@ -13,6 +13,7 @@ var coffee = {
     whippedCream: 'yes',
     type: 'cup'
 };
+console.log(coffee);
 
 /* 2.
 Create an object that represents your favourite movie. Please include title, actors, director, genre, popularity. 
@@ -25,7 +26,8 @@ var favoriteMovie = {
     director: "Joe Wright",
     year: 2005,
     popularity: 7.8
-}
+};
+console.log(favoriteMovie);
 
 /* 3.
 Write a function that creates an object that represent a computer program. 
@@ -35,6 +37,8 @@ boolean status that says if the program is completed or not.
  a method that checks if the program is written in JavaScript 
  as well as a method that checks if program is completed or not.
 */
+
+
 
 function computerProgram(programmingLanguage, description, gitRepository, isCompleted) {
 
@@ -50,9 +54,8 @@ function computerProgram(programmingLanguage, description, gitRepository, isComp
         checkIfIsJS: function () {
             if (this.programmingLanguage === "JavaScript") {
                 return true;
+
             } else {
-
-
                 return false;
             }
         },
@@ -65,9 +68,7 @@ function computerProgram(programmingLanguage, description, gitRepository, isComp
         }
     }
 }
-
-
-
+console.log(computerProgram("JavaScript", "JavaScript is the programming language of HTML and the Web", "bitpp", true));
 var program = computerProgram("JavaScript", "JS  is a dynamic computer programming language.", "Bit_pp", true);
 program.printRepository();
 program.checkIfIsJS();
@@ -77,6 +78,57 @@ program.printCompletedProgram();
 // phpProgram.printRepository();
 // phpProgram.checkIfIsJS();
 // phpProgram.printCompletedProgram();
+
+
+//drugi nacin
+function createProgram(a, b, c, d) {
+
+    var program = {
+        description: a,
+        programming_language: b,
+        git_repository: c,
+        isCompleted: d
+    };
+
+    return program;
+}
+
+function printRepository(input) {
+
+    console.log(input.git_repository);
+}
+
+var compProgram = createProgram("blabla", "csharp", "bitpp", "true");
+
+printRepository(compProgram);
+
+function checkIfJS(obj) {
+
+    if (obj.programming_language === "JavaScript") {
+        return true;
+    }
+
+    return false;
+
+}
+
+function checkIfCompleted(obj) {
+
+    if (obj.isCompleted) {
+        return true;
+    }
+
+    return false;
+
+}
+
+
+console.log(checkIfJS(compProgram));
+console.log(checkIfCompleted(compProgram));
+
+
+
+
 
 
 /*4.
@@ -100,17 +152,19 @@ function createRecipe(name, typeOfCuisine, complexity, listOfIngredients, prepar
 
 
         printIngredients: function () {
-            for (var i = 0; i < listOfIngredients.length; i++)
-                return listOfIngredients;
-
-
-
+            var ingred="";
+            for (var i = 0; i < listOfIngredients.length; i++){
+               ingred +=listOfIngredients[i] + ' ';
+            }
+            return listOfIngredients;
         },
     }
 
 }
 
-var serbian = createRecipe('df', 'rs', 'hard', ['sdf', 'sdf'])
+var italian = createRecipe("pizza", "italian", "medium", ["tomatoes", "cheese", "ham", "olives"],"10min","Prvo napravi testo za picu pa dodaj slojeve...");
+var res = italian.printIngredients();
+console.log(res);
 
 
 
@@ -147,9 +201,8 @@ function ComputerProgram(programmingLanguage, description, gitRepository, isComp
     this.checkIfIsJS = function () {
         if (this.programmingLanguage === "JavaScript") {
             return true;
+
         } else {
-
-
             return false;
         }
     }
@@ -161,10 +214,6 @@ function ComputerProgram(programmingLanguage, description, gitRepository, isComp
         }
     }
 }
-
-
-
-
 var program = new ComputerProgram("JavaScript", "JS  is a dynamic computer programming language.", "Bit_pp", true);
 program.printRepository();
 program.checkIfIsJS();
@@ -203,63 +252,11 @@ function Recipe(name, typeOfCuisine, complexity, listOfIngredients, preparingTim
     }
 }
 
-var serbian = new Recipe('df', 'rs', 'hard', ['sdf', 'sdf']);
+var serbian = new Recipe("pizza", "italian", "medium", ["tomatoes", "cheese", "ham", "olives"],"10min","Prvo napravi testo za picu pa dodaj slojeve...");
 var res = serbian.printIngredients();
 console.log(res);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var printIngredients = function (listOfIngredients) {
-    var bla = "";
-    for (var i = 0; i < listOfIngredients.length; i++) {
-        bla += listOfIngredients[i];
-
-    }
-    return bla;
-}
-
-
-var res = printIngredients(['sdf', 'ewrwerewr']);
-console.log(res);
-
-
-
-
-//built in objects 1.
-
-//1
-function Replace(initiate, fromBase, toBase) {
-    var intVal = parseInt(initiate, fromBase);
-    return intVal.toString(toBase);
-
-
-
-}
-
-var res = Replace('ff', 16, 8);
-console.log(res);
-
-//2
-
-function reverse(value) {
-
-    return String(value).reverse();
-
-}
 
 

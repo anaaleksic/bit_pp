@@ -1,5 +1,5 @@
 
-/* var godine = "25";
+ var godine = "25";
 var c = console.log
 
 if (godine < 40) {
@@ -295,8 +295,6 @@ switch (operator) {
 }
 
 console.log(result);
-
-*/
 
 var numbers = [4, 12, -3, 14];
 
